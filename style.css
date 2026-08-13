@@ -1,0 +1,60 @@
+/* Sembunyikan scrollbar bawaan tapi tetap bisa discroll */
+/* Pengaturan Scrollbar yang lebih nyaru */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: transparent; /* Diubah agar menyatu dengan background di belakangnya */
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(122, 46, 53, 0.4); /* Warna maroon (#7a2e35) dengan transparansi 40% */
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(122, 46, 53, 0.8); /* Warnanya jadi lebih solid saat kursor diarahkan ke scrollbar */
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Custom class untuk active menu navbar */
+.nav-active {
+    color: #fff !important;
+    background-color: #7a2e35;
+}
+.nav-item {
+    color: #cbd5e1; /* slate-300 */
+}
+
+/* Transisi untuk Carousel Project */
+.project-card {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: absolute;
+    width: 60%;
+    max-width: 500px;
+}
+.project-card.active {
+    transform: translateX(-50%) scale(1);
+    left: 50%;
+    opacity: 1;
+    z-index: 10;
+    cursor: pointer;
+}
+.project-card.prev {
+    transform: translateX(-100%) scale(0.85);
+    left: 40%;
+    opacity: 0.5;
+    z-index: 5;
+}
+.project-card.next {
+    transform: translateX(0%) scale(0.85);
+    left: 60%;
+    opacity: 0.5;
+    z-index: 5;
+}
+.project-card.hidden-card {
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
+}

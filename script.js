@@ -154,6 +154,23 @@ const organizations = [
         ]
     },
     {
+        name: "Wisuda Jurusan Teknik Elektro 2024",
+        position: "Vice Project Officer",
+        documentation: [
+            "wisjur/3.jpg",
+            "wisjur/2.jpg",
+            "wisjur/1.jpg"
+        ]
+    },
+    {
+        name: " Sosialisasi Jurusan Teknik Elektro 2024",
+        position: "Event Staff",
+        documentation: [
+            "sosjur/1.jpg",
+            "sosjur/2.jpg"
+        ]
+    },
+    {
         name: "Electro Activities Programme (E-TIME) 2025",
         position: "Coordinator of Relations Event",
         documentation: [
@@ -169,7 +186,7 @@ const certifications = [
     { title: "Datacomm", image: "sertif/DTC.png" },
     { title: "Business Development", image: "sertif/15.jpg" },
     { title: "Business Analyst & Product Strategy", image: "sertif/14.png" },
-    { title: "TOEFL Test Proof (Certificate is currently in administrative processing)", image: "sertif/13.png" },
+    { title: "TOEIC Test Proof (Certificate is currently in administrative processing)", image: "sertif/13.png" },
     { title: "Build an AI agent", image: "sertif/12.png" },
     { title: "Intellegent by Design: Build an AI Agent", image: "sertif/11.png" },
     { title: "Introduction to Large Language Models", image: "sertif/10.png" },
@@ -178,7 +195,8 @@ const certifications = [
     { title: "Python", image: "sertif/7.png" },
     { title: "50th Anniversary Satellite Webinar", image: "sertif/6.png" },
     { title: "Gemini for Student", image: "sertif/5.png" },
-    { title: "TOEIC", image: "sertif/4.png" },
+    { title: "Work Stress Prevention Efforts in Occupational Health and Safety (OHS) Implementation in Companies", image: "sertif/nyelip.png" },
+    { title: "TOEFL", image: "sertif/4.png" },
     { title: "Basic Java Progamming", image: "sertif/3.png" },
     { title: "Basic C Progamming", image: "sertif/2.png" },
     { title: "Basic Project Management", image: "sertif/1.png" },
@@ -223,7 +241,8 @@ const educationWork = {
 const programs = [
     { name: "Orbit Future Academy AWS re/Start", url: "https://www.instagram.com/p/DakX0rzjQEo/?igsh=cG5waDUxMjF1enMx&igsi=cG5waDUxMjF1enMx" },
     { name: "RevoU Coding Camp Software Engineering", url: "https://www.instagram.com/p/Dbk8JTPnSVM/?igsh=ZzVlc2k3OTA2dTV3&igsi=ZzVlc2k3OTA2dTV3" },
-    { name: "Karirnex Bootcamp Excel, Word, Power Point", url: "https://www.instagram.com/p/DbkuppxPdec/?igsh=MTBta3B5eTJhM2U3Zg==&igsi=MTBta3B5eTJhM2U3Zg==" }
+    { name: "Karirnex Bootcamp Excel, Word, Power Point", url: "https://www.instagram.com/p/DbkuppxPdec/?igsh=MTBta3B5eTJhM2U3Zg==&igsi=MTBta3B5eTJhM2U3Zg==" },
+    { name: "Pentingnya Personil K3 Listrik Dalam Mencapai Zero Accident Di Perusahaan", url: "https://www.instagram.com/p/DbSgJK6AXbW/?igsh=MTJ1ZDRkYWNuNGYzcg==&igsi=MTJ1ZDRkYWNuNGYzcg==" }
 ];
 
 

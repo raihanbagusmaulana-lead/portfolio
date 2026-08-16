@@ -137,6 +137,19 @@ const projects = [
              { image: "ftth/5.png", title: "NRZ Bitrate and Rise time budget calculation" },
              { image: "ftth/6.png", title: "SNR and BER Performance analysis" }
         ]
+    },
+    {
+        title: "Design and Troubleshooting of Ring Topology Using Cisco 2800 Series",
+        thumbnail: "aset/LOGOPNJ.png",
+        documentation: [
+             { image: "ring/1.png", title: "Objectives and Equipment" },
+             { image: "ring/2.png", title: "Experimental Procedures 1" },
+             { image: "ring/3.png", title: "Experimental Procedures 2" },
+             { image: "ring/4.png", title: "PuTTY Configuration Visual 2" },
+             { image: "ring/5.png", title: "PuTTY Configuration Visual 2" },
+             { image: "ring/6.png", title: "Wireshark Packet Captures" }
+
+        ]
     }
     
     
@@ -186,7 +199,7 @@ const certifications = [
     { title: "Datacomm", image: "sertif/DTC.png" },
     { title: "Business Development", image: "sertif/15.jpg" },
     { title: "Business Analyst & Product Strategy", image: "sertif/14.png" },
-    { title: "TOEIC Test Proof (Certificate is currently in administrative processing)", image: "sertif/13.png" },
+    { title: "TOEIC", image: "sertif/13.jpg" },
     { title: "Build an AI agent", image: "sertif/12.png" },
     { title: "Intellegent by Design: Build an AI Agent", image: "sertif/11.png" },
     { title: "Introduction to Large Language Models", image: "sertif/10.png" },
@@ -242,7 +255,9 @@ const programs = [
     { name: "Orbit Future Academy AWS re/Start", url: "https://www.instagram.com/p/DakX0rzjQEo/?igsh=cG5waDUxMjF1enMx&igsi=cG5waDUxMjF1enMx" },
     { name: "RevoU Coding Camp Software Engineering", url: "https://www.instagram.com/p/Dbk8JTPnSVM/?igsh=ZzVlc2k3OTA2dTV3&igsi=ZzVlc2k3OTA2dTV3" },
     { name: "Karirnex Bootcamp Excel, Word, Power Point", url: "https://www.instagram.com/p/DbkuppxPdec/?igsh=MTBta3B5eTJhM2U3Zg==&igsi=MTBta3B5eTJhM2U3Zg==" },
-    { name: "Pentingnya Personil K3 Listrik Dalam Mencapai Zero Accident Di Perusahaan", url: "https://www.instagram.com/p/DbSgJK6AXbW/?igsh=MTJ1ZDRkYWNuNGYzcg==&igsi=MTJ1ZDRkYWNuNGYzcg==" }
+    { name: "Pentingnya Personil K3 Listrik Dalam Mencapai Zero Accident Di Perusahaan", url: "https://www.instagram.com/p/DbSgJK6AXbW/?igsh=MTJ1ZDRkYWNuNGYzcg==&igsi=MTJ1ZDRkYWNuNGYzcg==" },
+    { name: "Python Essentials 1", url: "https://www.netacad.com/courses/python-essentials-1?courseLang=en-US" }
+
 ];
 
 
@@ -379,12 +394,11 @@ function renderProjects() {
         // Kode div.className biarkan saja sama seperti sebelumnya
         
         div.innerHTML = `
-            <!-- Wadah gambar: mengambil sisa ruang di atas (flex-1) -->
-            <div class="w-full flex-1 flex items-center justify-center overflow-hidden mb-3">
+            <!-- Tambahkan 'hidden md:flex' di baris ini agar gambar hilang di HP tapi muncul di Laptop -->
+            <div class="hidden md:flex w-full flex-1 items-center justify-center overflow-hidden mb-3">
                 <img src="${proj.thumbnail}" alt="${proj.title}" class="max-w-full max-h-full object-contain">
             </div>
             
-            <!-- Judul proyek: diposisikan di paling bawah, tulisan detail dihapus -->
             <h3 class="text-xl md:text-2xl font-bold uppercase text-center shrink-0">${proj.title}</h3>
         `;
         container.appendChild(div);

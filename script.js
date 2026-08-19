@@ -150,6 +150,27 @@ const projects = [
              { image: "ring/6.png", title: "Wireshark Packet Captures" }
 
         ]
+    },
+    {
+        title: "Machine Learning Implementation for Handover Prediction Optimization in 4G LTE Networks",
+        thumbnail: "aset/LOGOPNJ.png",
+        documentation: [
+             { image: "ml/1.png", title: "Main Page" },
+             { image: "ml/2.png", title: "Scenario Configuration" },
+             { image: "ml/3.png", title: "Scenario Legenda" },
+             { image: "ml/4.png", title: "BTS Capacity Scenario" },
+             { image: "ml/5.png", title: "Spatial Visualization" },
+             { image: "ml/6.png", title: "Simulation Log Table" },
+             { image: "ml/7.png", title: "Handover Logs" },
+             { image: "ml/8.png", title: "Event Logs" },
+             { image: "ml/9.png", title: "Cumulative Handover (HO) Plot: A vs. B" },
+             { image: "ml/10.png", title: "RSRP Comparison Plot: A vs. B" },
+             { image: "ml/11.png", title: "RSRP vs. Neighbor A Plot" },
+             { image: "ml/12.png", title: "RSRP vs. Neighbor B Plot" },
+             { image: "ml/13.png", title: "Simulation Information" },
+             { image: "ml/14.png", title: "Performance Comparison Metrics" }
+
+        ]
     }
     
     

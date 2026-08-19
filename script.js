@@ -218,6 +218,7 @@ const organizations = [
 
 const certifications = [
     { title: "Datacomm", image: "sertif/DTC.png" },
+    { title: "Introduction  to Software Engineering", image: "sertif/16.jpg" },
     { title: "Business Development", image: "sertif/15.jpg" },
     { title: "Business Analyst & Product Strategy", image: "sertif/14.png" },
     { title: "TOEIC", image: "sertif/13.jpg" },

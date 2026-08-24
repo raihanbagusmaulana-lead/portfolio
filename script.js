@@ -218,6 +218,7 @@ const organizations = [
 
 const certifications = [
     { title: "Datacomm", image: "sertif/DTC.png" },
+    { title: "The Importance of Electrical OHS Personnel in Achieving Zero Accidents in the Company", image: "sertif/17.jpg" },
     { title: "Introduction  to Software Engineering", image: "sertif/16.jpg" },
     { title: "Business Development", image: "sertif/15.jpg" },
     { title: "Business Analyst & Product Strategy", image: "sertif/14.png" },
@@ -276,7 +277,6 @@ const educationWork = {
 const programs = [
     { name: "Orbit Future Academy AWS re/Start", url: "https://www.instagram.com/p/DakX0rzjQEo/?igsh=cG5waDUxMjF1enMx&igsi=cG5waDUxMjF1enMx" },
     { name: "Karirnex Bootcamp Excel, Word, Power Point", url: "https://www.instagram.com/p/DbkuppxPdec/?igsh=MTBta3B5eTJhM2U3Zg==&igsi=MTBta3B5eTJhM2U3Zg==" },
-    { name: "Pentingnya Personil K3 Listrik Dalam Mencapai Zero Accident Di Perusahaan", url: "https://www.instagram.com/p/DbSgJK6AXbW/?igsh=MTJ1ZDRkYWNuNGYzcg==&igsi=MTJ1ZDRkYWNuNGYzcg==" },
     { name: "Python Essentials 1", url: "https://www.netacad.com/courses/python-essentials-1?courseLang=en-US" }
 
 ];

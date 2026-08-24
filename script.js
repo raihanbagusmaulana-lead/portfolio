@@ -402,7 +402,6 @@ function renderProjects() {
     
     projects.forEach((proj, index) => {
         const div = document.createElement('div');
-        div.className = "project-card bg-maroon-800 rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-center items-center text-white aspect-[4/3] p-4";
         div.id = `proj-card-${index}`;
         
         // Klik card yg active akan buka modal
@@ -411,16 +410,20 @@ function renderProjects() {
                 openModal('project', index);
             }
         };
-
-        // Kode div.className biarkan saja sama seperti sebelumnya
         
         div.innerHTML = `
             <!-- Tambahkan 'hidden md:flex' di baris ini agar gambar hilang di HP tapi muncul di Laptop -->
             <div class="hidden md:flex w-full flex-1 items-center justify-center overflow-hidden mb-3">
-                <img src="${proj.thumbnail}" alt="${proj.title}" class="max-w-full max-h-full object-contain">
+                <!-- Tambahan efek group-hover:scale-105 agar gambar sedikit membesar saat disentuh -->
+                <img src="${proj.thumbnail}" alt="${proj.title}" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
             </div>
             
             <h3 class="text-xl md:text-2xl font-bold uppercase text-center shrink-0">${proj.title}</h3>
+
+            <!-- TEKS PETUNJUK BARU: Menyembunyi di laptop sampai di-hover, tapi selalu muncul di HP -->
+            <p class="mt-2 text-xs md:text-sm italic text-gray-400 tracking-wide opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+                Click card to view documentation
+            </p>
         `;
         container.appendChild(div);
     });
@@ -439,10 +442,13 @@ function updateProjectCarousel() {
     const total = projects.length;
     for (let i = 0; i < total; i++) {
         const card = document.getElementById(`proj-card-${i}`);
-       card.className = "project-card bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-center items-center text-maroon-900 aspect-[4/3] p-4 border border-gray-200";
+        
+        // Reset class dasar 
+        card.className = "project-card bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-center items-center text-maroon-900 aspect-[4/3] p-4 border border-gray-200";
         
         if (i === currentProjectIndex) {
-            card.classList.add('active');
+            // KUNCI: Tambahkan class 'group' HANYA pada kartu yang aktif di tengah
+            card.classList.add('active', 'group');
         } else if (i === (currentProjectIndex - 1 + total) % total) {
             card.classList.add('prev');
         } else if (i === (currentProjectIndex + 1) % total) {

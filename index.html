@@ -141,25 +141,31 @@
     <section id="experience" class="py-24 bg-altgray section-scroll text-center flex flex-col items-center">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             
-           <!-- Education -->
-            <div class="mb-20">
+          <!-- Education -->
+            <div class="mb-20 flex flex-col items-center w-full">
                 <h2 class="text-3xl font-bold mb-10 uppercase tracking-widest text-gray-800">EDUCATION</h2>
-                <div class="flex justify-center cursor-pointer hover:scale-105 transition-transform" onclick="openModal('education')">
-                    <!-- Class grayscale ditambahkan di tag img ini -->
-                    <img id="edu-logo" src="aset/LOGOPNJ.png" alt="PNJ" class="w-48 object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+                <div class="flex flex-col items-center justify-center cursor-pointer group" onclick="openModal('education')">
+                    <img id="edu-logo" src="aset/LOGOPNJ.png" alt="PNJ" class="w-48 object-contain grayscale opacity-80 group-hover:scale-105 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
+                    
+                    <!-- Teks Petunjuk -->
+                    <p class="mt-6 text-sm md:text-base italic text-gray-400 tracking-wide group-hover:text-maroon-700 transition-colors duration-300">
+                        Click logo to view details
+                    </p>
                 </div>
             </div>
 
             <!-- Work Experience -->
-            <div>
+            <div class="flex flex-col items-center w-full">
                 <h2 class="text-3xl font-bold mb-10 uppercase tracking-widest text-gray-800">WORK EXPERIENCE</h2>
-                <div class="flex justify-center cursor-pointer hover:scale-105 transition-transform" onclick="openModal('work')">
-                    <!-- Class grayscale ditambahkan di tag img ini -->
-                    <img id="work-logo" src="aset/DATACOMM.png" alt="Datacomm" class="w-64 object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+                <div class="flex flex-col items-center justify-center cursor-pointer group" onclick="openModal('work')">
+                    <img id="work-logo" src="aset/DATACOMM.png" alt="Datacomm" class="w-64 object-contain grayscale opacity-80 group-hover:scale-105 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
+                    
+                    <!-- Teks Petunjuk -->
+                    <p class="mt-6 text-sm md:text-base italic text-gray-400 tracking-wide group-hover:text-maroon-700 transition-colors duration-300">
+                        Click logo to view documentation
+                    </p>
                 </div>
             </div>
-
-        </div>
     </section>
 
     <!-- 4. PORTFOLIO PROJECT SECTION -->

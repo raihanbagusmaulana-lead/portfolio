@@ -323,7 +323,7 @@ function renderPrograms() {
     programs.forEach(prog => {
         const a = document.createElement('a');
         a.href = prog.url;
-        a.className = "block bg-maroon-800 text-white py-4 px-6 rounded-md hover:bg-maroon-700 transition shadow text-lg w-full max-w-4xl mx-auto font-medium";
+        a.className = "block bg-white #050a24 border border-gray-100 py-4 px-6 rounded-md hover:bg-blue-50 hover:text-blue-600 transition shadow-sm text-lg w-full max-w-4xl mx-auto font-bold";
         a.textContent = prog.name;
         container.appendChild(a);
     });
@@ -640,4 +640,24 @@ function initScrollSpy() {
     sections.forEach(section => {
         observer.observe(section);
     });
+    // Mengambil elemen tombol
+const scrollToTopBtn = document.getElementById("btnScrollToTop");
+
+// Fungsi untuk mengecek posisi scroll
+window.onscroll = function() {
+  // Jika halaman di-scroll lebih dari 100px ke bawah, munculkan tombol
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    scrollToTopBtn.style.display = "block";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+};
+
+// Fungsi saat tombol diklik
+scrollToTopBtn.addEventListener("click", function() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth" // Membuat efek scroll menjadi mulus, tidak langsung meloncat
+  });
+});
 }

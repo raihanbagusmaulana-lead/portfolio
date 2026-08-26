@@ -7,11 +7,11 @@
     background: transparent; /* Diubah agar menyatu dengan background di belakangnya */
 }
 ::-webkit-scrollbar-thumb {
-    background: rgba(122, 46, 53, 0.4); /* Warna maroon (#7a2e35) dengan transparansi 40% */
+    background: rgba(9, 21, 64, 0.4); /* Warna navy (#091540) dengan transparansi 40% */
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(122, 46, 53, 0.8); /* Warnanya jadi lebih solid saat kursor diarahkan ke scrollbar */
+    background: rgba(9, 21, 64, 0.8); /* Warnanya jadi lebih solid saat kursor diarahkan ke scrollbar */
 }
 
 body.modal-open {
@@ -21,10 +21,10 @@ body.modal-open {
 /* Custom class untuk active menu navbar */
 .nav-active {
     color: #fff !important;
-    background-color: #7a2e35;
+    background-color: #091540; /* Warna utama navy */
 }
 .nav-item {
-    color: #cbd5e1; /* slate-300 */
+    color: #3b82f6; /* slate-300 */
 }
 
 /* Transisi untuk Carousel Project */
@@ -57,4 +57,37 @@ body.modal-open {
     opacity: 0;
     z-index: 0;
     pointer-events: none;
+}
+
+/* Styling untuk Tombol Scroll to Top */
+#btnScrollToTop {
+  display: none; /* Disembunyikan secara default, akan dimunculkan oleh JS */
+  position: fixed; /* Membuatnya tetap di posisinya meski di-scroll */
+  bottom: 30px; /* Jarak dari bawah */
+  right: 30px; /* Jarak dari kanan */
+  z-index: 999; /* Memastikan tombol selalu ada di atas elemen lain */
+  border: none;
+  outline: none;
+  background-color: #091540; /* Warna utama navy */
+  color: white; /* Warna ikon panah */
+  cursor: pointer;
+  border-radius: 50%; /* Membuat tombol menjadi bulat sempurna */
+  width: 55px; 
+  height: 55px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Memberikan efek bayangan */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Animasi transisi */
+}
+
+/* Efek saat kursor diarahkan ke tombol */
+#btnScrollToTop:hover {
+  background-color: #122566; /* Warna hover navy yang sedikit lebih terang */
+  transform: translateY(-3px); /* Membuat tombol sedikit terangkat saat di-hover */
+}
+
+/* Memastikan letak panah SVG pas di tengah tombol */
+#btnScrollToTop svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+  margin: auto;
 }

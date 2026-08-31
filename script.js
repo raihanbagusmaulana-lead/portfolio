@@ -218,6 +218,7 @@ const organizations = [
 
 const certifications = [
     { title: "Datacomm", image: "sertif/DTC.png" },
+    { title: "Microsoft Office Excel, Word & Power Point Bootcamp Specialist", image: "sertif/18.jpg" },
     { title: "The Importance of Electrical OHS Personnel in Achieving Zero Accidents in the Company", image: "sertif/17.jpg" },
     { title: "Introduction  to Software Engineering", image: "sertif/16.jpg" },
     { title: "Business Development", image: "sertif/15.jpg" },

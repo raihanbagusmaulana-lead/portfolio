@@ -1,5 +1,5 @@
 /* ==========================================================================
-   1. STRUKTUR DATA UTAMA (Silakan edit data ini)
+   1. STRUKTUR DATA UTAMA
    ========================================================================== */
 
 const projects = [
@@ -148,32 +148,8 @@ const projects = [
              { image: "ring/4.png", title: "PuTTY Configuration Visual 2" },
              { image: "ring/5.png", title: "PuTTY Configuration Visual 2" },
              { image: "ring/6.png", title: "Wireshark Packet Captures" }
-
-        ]
-    },
-    {
-        title: "Machine Learning Implementation for Handover Prediction Optimization in 4G LTE Networks",
-        thumbnail: "aset/LOGOPNJ.png",
-        documentation: [
-             { image: "ml/1.png", title: "Main Page" },
-             { image: "ml/2.png", title: "Scenario Configuration" },
-             { image: "ml/3.png", title: "Scenario Legenda" },
-             { image: "ml/4.png", title: "BTS Capacity Scenario" },
-             { image: "ml/5.png", title: "Spatial Visualization" },
-             { image: "ml/6.png", title: "Simulation Log Table" },
-             { image: "ml/7.png", title: "Handover Logs" },
-             { image: "ml/8.png", title: "Event Logs" },
-             { image: "ml/9.png", title: "Cumulative Handover (HO) Plot: A vs. B" },
-             { image: "ml/10.png", title: "RSRP Comparison Plot: A vs. B" },
-             { image: "ml/11.png", title: "RSRP vs. Neighbor A Plot" },
-             { image: "ml/12.png", title: "RSRP vs. Neighbor B Plot" },
-             { image: "ml/13.png", title: "Simulation Information" },
-             { image: "ml/14.png", title: "Performance Comparison Metrics" }
-
         ]
     }
-    
-    
 ];
 
 const organizations = [
@@ -247,39 +223,60 @@ const educationWork = {
         major: "Electrical Engineering/Telecommunication",
         gpa: "3.77/4.00"
     },
-    work: {
-        logo: "aset/DATACOMM.png",
-        documentation: [
-            { image: "dtc/1.jpeg", title: "Module Insertion at Telkom Slipi" },
-            { image: "dtc/2.jpeg", title: "Full Node Installation in Kebayoran" },
-            { image: "dtc/3.jpeg", title: "Module Insertion in Balikpapan" },
-            { image: "dtc/4.jpeg", title: "Intranode Migration in Balikpapan" },
-            { image: "dtc/5.jpeg", title: "Module Insertion in Balikpapan" },
-            { image: "dtc/6.jpeg", title: "Module Staging" },
-            { image: "dtc/7.jpeg", title: "Module Upgrade in Tasikmalaya" },
-            { image: "dtc/8.jpeg", title: "Link Cut in Tasikmalaya" },
-            { image: "dtc/9.jpeg", title: "Module Upgrade in Batam" },
-            { image: "dtc/10.jpeg", title: "Module and OS Upgrade in Batam" },
-            { image: "dtc/11.jpeg", title: "RAN to PE Mobile Migration for Telkom Indonesia L3VPN Project at TTC Bogor" },
-            { image: "dtc/12.jpeg", title: "RAN to PE Mobile Migration for Telkom Indonesia L3VPN Project at TTC Jakarta" },
-            { image: "dtc/13.jpeg", title: "Port Migration in Palembang" },
-            { image: "dtc/14.jpeg", title: "Module Insertion in Central Kalimantan" },
-            { image: "dtc/15.jpeg", title: "Node Installation and Full Port Migration from Old to New Metro in Tasikmalaya" },
-            { image: "dtc/16.jpeg", title: "Intranode Migration in Palembang" },
-            { image: "dtc/17.jpeg", title: "Intranode Migration in Palembang" },
-            { image: "dtc/18.jpeg", title: "Link Upgrade in Tasikmalaya" },
-            { image: "dtc/19.jpeg", title: "Link Cut in Indramayu" },
-            { image: "dtc/20.jpeg", title: "RAN to PE Mobile Migration for Telkom Indonesia L3VPN Project at TTC Jakarta" },
-            { image: "dtc/21.jpeg", title: "Module and OS Upgrade in Balaraja" }
-        ]
-    }
+    // DI SINI PERBAIKANNYA: Menggunakan works berbentuk array []
+    works: [
+        {
+            logo: "aset/DATACOMM.png",
+            documentation: [
+                { image: "dtc/1.jpeg", title: "Module Insertion at Telkom Slipi" },
+                { image: "dtc/2.jpeg", title: "Full Node Installation in Kebayoran" },
+                { image: "dtc/3.jpeg", title: "Module Insertion in Balikpapan" },
+                { image: "dtc/4.jpeg", title: "Intranode Migration in Balikpapan" },
+                { image: "dtc/5.jpeg", title: "Module Insertion in Balikpapan" },
+                { image: "dtc/6.jpeg", title: "Module Staging" },
+                { image: "dtc/7.jpeg", title: "Module Upgrade in Tasikmalaya" },
+                { image: "dtc/8.jpeg", title: "Link Cut in Tasikmalaya" },
+                { image: "dtc/9.jpeg", title: "Module Upgrade in Batam" },
+                { image: "dtc/10.jpeg", title: "Module and OS Upgrade in Batam" },
+                { image: "dtc/11.jpeg", title: "RAN to PE Mobile Migration for Telkom Indonesia L3VPN Project at TTC Bogor" },
+                { image: "dtc/12.jpeg", title: "RAN to PE Mobile Migration for Telkom Indonesia L3VPN Project at TTC Jakarta" },
+                { image: "dtc/13.jpeg", title: "Port Migration in Palembang" },
+                { image: "dtc/14.jpeg", title: "Module Insertion in Central Kalimantan" },
+                { image: "dtc/15.jpeg", title: "Node Installation and Full Port Migration from Old to New Metro in Tasikmalaya" },
+                { image: "dtc/16.jpeg", title: "Intranode Migration in Palembang" },
+                { image: "dtc/17.jpeg", title: "Intranode Migration in Palembang" },
+                { image: "dtc/18.jpeg", title: "Link Upgrade in Tasikmalaya" },
+                { image: "dtc/19.jpeg", title: "Link Cut in Indramayu" },
+                { image: "dtc/20.jpeg", title: "RAN to PE Mobile Migration for Telkom Indonesia L3VPN Project at TTC Jakarta" },
+                { image: "dtc/21.jpeg", title: "Module and OS Upgrade in Balaraja" }
+            ]
+        },
+        {
+            logo: "aset/LOGOPNJ.png",
+            documentation: [
+                { image: "ml/1.png", title: "Main Page" },
+                { image: "ml/2.png", title: "Scenario Configuration" },
+                { image: "ml/3.png", title: "Scenario Legenda" },
+                { image: "ml/4.png", title: "BTS Capacity Scenario" },
+                { image: "ml/5.png", title: "Spatial Visualization" },
+                { image: "ml/6.png", title: "Simulation Log Table" },
+                { image: "ml/7.png", title: "Handover Logs" },
+                { image: "ml/8.png", title: "Event Logs" },
+                { image: "ml/9.png", title: "Cumulative Handover (HO) Plot: A vs. B" },
+                { image: "ml/10.png", title: "RSRP Comparison Plot: A vs. B" },
+                { image: "ml/11.png", title: "RSRP vs. Neighbor A Plot" },
+                { image: "ml/12.png", title: "RSRP vs. Neighbor B Plot" },
+                { image: "ml/13.png", title: "Simulation Information" },
+                { image: "ml/14.png", title: "Performance Comparison Metrics" }
+            ]
+        }
+    ]
 };
 
 const programs = [
     { name: "Orbit Future Academy AWS re/Start", url: "https://www.instagram.com/p/DakX0rzjQEo/?igsh=cG5waDUxMjF1enMx&igsi=cG5waDUxMjF1enMx" },
     { name: "Karirnex Bootcamp Excel, Word, Power Point", url: "https://www.instagram.com/p/DbkuppxPdec/?igsh=MTBta3B5eTJhM2U3Zg==&igsi=MTBta3B5eTJhM2U3Zg==" },
     { name: "Python Essentials 1", url: "https://www.netacad.com/courses/python-essentials-1?courseLang=en-US" }
-
 ];
 
 
@@ -296,7 +293,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Set logo edu/work
     document.getElementById('edu-logo').src = educationWork.education.logo;
-    document.getElementById('work-logo').src = educationWork.work.logo;
+    
+    // DI SINI PERBAIKANNYA: Mengisi kedua logo Work Experience
+    if(document.getElementById('work-logo-0')) {
+        document.getElementById('work-logo-0').src = educationWork.works[0].logo;
+    }
+    if(document.getElementById('work-logo-1')) {
+        document.getElementById('work-logo-1').src = educationWork.works[1].logo;
+    }
 
     // Mobile Menu Toggle
     const btn = document.getElementById('mobile-menu-btn');
@@ -324,7 +328,8 @@ function renderPrograms() {
     programs.forEach(prog => {
         const a = document.createElement('a');
         a.href = prog.url;
-        a.className = "block bg-white #050a24 border border-gray-100 py-4 px-6 rounded-md hover:bg-blue-50 hover:text-blue-600 transition shadow-sm text-lg w-full max-w-4xl mx-auto font-bold";
+        // DI SINI PERBAIKANNYA: Mengganti class Tailwind yang error menjadi text-blue-700 yang sah
+        a.className = "block bg-white text-blue-700 border border-gray-100 py-4 px-6 rounded-md hover:bg-blue-50 hover:text-blue-900 transition shadow-sm text-lg w-full max-w-4xl mx-auto font-bold";
         a.textContent = prog.name;
         container.appendChild(a);
     });
@@ -346,22 +351,20 @@ function renderCertifications() {
 /* ==========================================================================
    4. ORGANIZATION CAROUSEL INLINE (Bukan Modal)
    ========================================================================== */
-let orgState = {}; // Menyimpan index gambar aktif per organisasi
+let orgState = {}; 
 
 function renderOrganizations() {
     const container = document.getElementById('organization-grid');
     organizations.forEach((org, index) => {
-        orgState[index] = 0; // Set index awal foto = 0
+        orgState[index] = 0; 
         
         const card = document.createElement('div');
         card.className = "text-left";
         
-        // Buat struktur card
         card.innerHTML = `
             <div class="bg-maroon-800 rounded-3xl overflow-hidden aspect-[4/3] relative mb-4 shadow-lg group">
                 <img id="org-img-${index}" src="${org.documentation[0]}" alt="${org.name}" class="w-full h-full object-cover">
                 
-                <!-- Tombol Navigasi Inline di pojok kanan bawah -->
                 <div class="absolute bottom-4 right-4 flex space-x-2">
                     <button onclick="changeOrgImg(${index}, -1)" class="bg-white/20 hover:bg-white/40 text-white p-2 rounded-lg backdrop-blur-sm transition">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
@@ -378,7 +381,6 @@ function renderOrganizations() {
     });
 }
 
-// Fungsi mengganti gambar langsung di dalam card (tanpa modal)
 function changeOrgImg(orgIndex, dir) {
     const org = organizations[orgIndex];
     let currIdx = orgState[orgIndex];
@@ -405,7 +407,6 @@ function renderProjects() {
         const div = document.createElement('div');
         div.id = `proj-card-${index}`;
         
-        // Klik card yg active akan buka modal
         div.onclick = () => {
             if (currentProjectIndex === index) {
                 openModal('project', index);
@@ -413,15 +414,12 @@ function renderProjects() {
         };
         
         div.innerHTML = `
-            <!-- Tambahkan 'hidden md:flex' di baris ini agar gambar hilang di HP tapi muncul di Laptop -->
             <div class="hidden md:flex w-full flex-1 items-center justify-center overflow-hidden mb-3">
-                <!-- Tambahan efek group-hover:scale-105 agar gambar sedikit membesar saat disentuh -->
                 <img src="${proj.thumbnail}" alt="${proj.title}" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
             </div>
             
             <h3 class="text-xl md:text-2xl font-bold uppercase text-center shrink-0">${proj.title}</h3>
 
-            <!-- TEKS PETUNJUK BARU: Menyembunyi di laptop sampai di-hover, tapi selalu muncul di HP -->
             <p class="mt-2 text-xs md:text-sm italic text-gray-400 tracking-wide opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
                 Click card to view documentation
             </p>
@@ -444,11 +442,9 @@ function updateProjectCarousel() {
     for (let i = 0; i < total; i++) {
         const card = document.getElementById(`proj-card-${i}`);
         
-        // Reset class dasar 
         card.className = "project-card bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-center items-center text-maroon-900 aspect-[4/3] p-4 border border-gray-200";
         
         if (i === currentProjectIndex) {
-            // KUNCI: Tambahkan class 'group' HANYA pada kartu yang aktif di tengah
             card.classList.add('active', 'group');
         } else if (i === (currentProjectIndex - 1 + total) % total) {
             card.classList.add('prev');
@@ -466,8 +462,8 @@ function updateProjectCarousel() {
    ========================================================================== */
 let modalType = null; 
 let modalDataIndex = 0; 
-let modalInnerIndex = 0; // Untuk navigasi array gambar dalam modal
-let currentModalImages = []; // Array gambar yg sedang diload di modal
+let modalInnerIndex = 0; 
+let currentModalImages = []; 
 
 function openModal(type, dataIndex = 0) {
     modalType = type;
@@ -479,12 +475,10 @@ function openModal(type, dataIndex = 0) {
     const btnPrev = document.getElementById('modal-prev');
     const btnNext = document.getElementById('modal-next');
     
-    // Reset isi
     area.innerHTML = '';
     btnPrev.classList.add('hidden');
     btnNext.classList.add('hidden');
 
-    // BUILD CONTENT BERDASARKAN TYPE
     if (type === 'education') {
         const edu = educationWork.education;
         area.innerHTML = `
@@ -496,7 +490,8 @@ function openModal(type, dataIndex = 0) {
         `;
     } 
     else if (type === 'work') {
-        currentModalImages = educationWork.work.documentation;
+        // DI SINI PERBAIKANNYA: Menggunakan works dari array
+        currentModalImages = educationWork.works[modalDataIndex].documentation;
         renderModalImage();
     }
     else if (type === 'project') {
@@ -504,19 +499,16 @@ function openModal(type, dataIndex = 0) {
         renderModalImage();
     }
     else if (type === 'certification') {
-        // Cukup panggil variabel certifications secara langsung, hapus .map(c => c.image)
         currentModalImages = certifications; 
         modalInnerIndex = modalDataIndex;
         renderModalImage();
     }
 
-    // Tampilkan Modal
     document.body.classList.add('modal-open');
     const container = document.getElementById('modal-container');
     container.classList.remove('hidden');
     container.classList.add('flex');
     
-    // Efek popup
     setTimeout(() => {
         document.getElementById('modal-card').classList.remove('scale-95');
         document.getElementById('modal-card').classList.add('scale-100');
@@ -533,14 +525,11 @@ function renderModalImage() {
         let modalTitle = "";
         let currentData = currentModalImages[modalInnerIndex];
 
-        // 1. Deteksi jenis data dan ambil judul dinamis per slide
         if (modalType === 'project' || modalType === 'work') {
-            // Mengecek apakah data sudah berupa format baru (punya image & title)
             if (typeof currentData === 'object' && currentData !== null) {
                 imageUrl = currentData.image;
                 modalTitle = currentData.title;
             } else {
-                // Fallback aman jika data masih berupa link gambar biasa
                 imageUrl = currentData;
                 modalTitle = modalType === 'project' ? projects[modalDataIndex].title : "Dokumentasi";
             }
@@ -549,7 +538,6 @@ function renderModalImage() {
             modalTitle = currentData.title;
         }
 
-        // 2. Render HTML ke dalam modal
         area.innerHTML = `
             <div class="w-full h-full flex flex-col">
                 <h3 class="text-xl md:text-2xl font-bold uppercase text-maroon-900 mb-2 md:mb-4 text-center shrink-0 tracking-wider">
@@ -600,7 +588,6 @@ function closeModal() {
     }, 200);
 }
 
-// Tutup dengan tombol ESC
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !document.getElementById('modal-container').classList.contains('hidden')) {
         closeModal();
@@ -618,7 +605,7 @@ function initScrollSpy() {
 
     const observerOptions = {
         root: null,
-        rootMargin: '-30% 0px -70% 0px', // Aktif ketika section nyampe di 30% layar atas
+        rootMargin: '-30% 0px -70% 0px', 
         threshold: 0
     };
 
@@ -627,7 +614,6 @@ function initScrollSpy() {
             if (entry.isIntersecting) {
                 const id = entry.target.getAttribute('id');
                 
-                // Hapus aktif dari semua link
                 [...navLinksDesktop, ...navLinksMobile].forEach(link => {
                     link.classList.remove('nav-active');
                     if (link.getAttribute('href') === `#${id}`) {
@@ -641,24 +627,21 @@ function initScrollSpy() {
     sections.forEach(section => {
         observer.observe(section);
     });
-    // Mengambil elemen tombol
-const scrollToTopBtn = document.getElementById("btnScrollToTop");
 
-// Fungsi untuk mengecek posisi scroll
-window.onscroll = function() {
-  // Jika halaman di-scroll lebih dari 100px ke bawah, munculkan tombol
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    scrollToTopBtn.style.display = "block";
-  } else {
-    scrollToTopBtn.style.display = "none";
-  }
-};
+    const scrollToTopBtn = document.getElementById("btnScrollToTop");
 
-// Fungsi saat tombol diklik
-scrollToTopBtn.addEventListener("click", function() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth" // Membuat efek scroll menjadi mulus, tidak langsung meloncat
-  });
-});
+    window.onscroll = function() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    };
+
+    scrollToTopBtn.addEventListener("click", function() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth" 
+        });
+    });
 }

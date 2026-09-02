@@ -42,17 +42,17 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex-shrink-0 cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <span class="font-semibold text-lg tracking-wider text-blue-500">raihanbagusmaulana</span>
+                    <span class="font-semibold text-lg tracking-wider text-gray-200">raihanbagusmaulana</span>
                 </div>
                 <!-- Desktop Menu -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-6 nav-links">
-                        <a href="#home" class="nav-item hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#home" class="nav-item text-slate-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
                         <a href="#about" class="nav-item hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">About me</a>
-                        <a href="#experience" class="nav-item hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">Work Experience</a>
-                        <a href="#project" class="nav-item hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">Project</a>
-                        <a href="#organization" class="nav-item hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">Organization Experience</a>
-                        <a href="#certification" class="nav-item hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">Certification</a>
+                        <a href="#experience" class="nav-item text-slate-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Work Experience</a>
+                        <a href="#project" class="nav-item text-slate-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Project</a>
+                        <a href="#organization" class="nav-item text-slate-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Organization Experience</a>
+                        <a href="#certification" class="nav-item text-slate-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Certification</a>
                     </div>
                 </div>
                 <!-- Mobile Menu Button -->
@@ -89,22 +89,18 @@
         </div>
     </section>
 
-    <!--<!-- 2. ABOUT ME SECTION -->
+    <!-- 2. ABOUT ME SECTION -->
     <section id="about" class="py-24 bg-white section-scroll">
         <div class="max-w-[90%] mx-auto px-4 md:px-10">
-            <!-- Diubah menjadi 3 kolom yang sejajar (grid-cols-3) -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 items-start h-full">
-                
                 <!-- Kolom 1 (Kiri): Photo -->
                 <div class="flex justify-center">
                     <div class="w-full max-w-md aspect-[3/4] rounded-3xl overflow-hidden shadow-xl border-4 border-maroon-800">
                         <img src="ASET/ORANG.jpeg" alt="Raihan" class="w-full h-full object-cover">
                     </div>
                 </div>
-                
                 <!-- Kolom 2 (Tengah): About Me -->
                 <div class="flex flex-col">
-                    <!-- Judul dibuat lebih besar (text-3xl font-extrabold) -->
                     <h2 class="text-3xl font-extrabold mb-6 uppercase tracking-wider text-maroon-900">ABOUT ME</h2>
                     <div class="text-gray-700 space-y-4 text-justify">
                         <p class="text-base leading-relaxed">
@@ -115,7 +111,6 @@
                         </p>
                     </div>
                 </div>
-                
                 <!-- Kolom 3 (Kanan): Technical Skills -->
                 <div class="flex flex-col">
                     <h2 class="text-3xl font-extrabold mb-6 uppercase tracking-wider text-maroon-900">TECHNICAL SKILLS</h2>
@@ -132,7 +127,6 @@
                         </ul>
                     </div>
                 </div>
-                
             </div>
         </div>
     </section>
@@ -146,8 +140,6 @@
                 <h2 class="text-3xl font-bold mb-10 uppercase tracking-widest text-gray-800">EDUCATION</h2>
                 <div class="flex flex-col items-center justify-center cursor-pointer group" onclick="openModal('education')">
                     <img id="edu-logo" src="aset/LOGOPNJ.png" alt="PNJ" class="w-48 object-contain grayscale opacity-80 group-hover:scale-105 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
-                    
-                    <!-- Teks Petunjuk -->
                     <p class="mt-6 text-sm md:text-base italic text-gray-400 tracking-wide group-hover:text-maroon-700 transition-colors duration-300">
                         Click logo to view details
                     </p>
@@ -157,27 +149,35 @@
             <!-- Work Experience -->
             <div class="flex flex-col items-center w-full">
                 <h2 class="text-3xl font-bold mb-10 uppercase tracking-widest text-gray-800">WORK EXPERIENCE</h2>
-                <div class="flex flex-col items-center justify-center cursor-pointer group" onclick="openModal('work')">
-                    <img id="work-logo" src="aset/DATACOMM.png" alt="Datacomm" class="w-64 object-contain grayscale opacity-80 group-hover:scale-105 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
+                
+                <!-- DI SINI PERBAIKANNYA: Ada 2 tempat logo sekarang -->
+                <div class="flex flex-wrap items-center justify-center gap-12 md:gap-32 w-full">
                     
-                    <!-- Teks Petunjuk -->
-                    <p class="mt-6 text-sm md:text-base italic text-gray-400 tracking-wide group-hover:text-maroon-700 transition-colors duration-300">
-                        Click logo to view documentation
-                    </p>
+                    <!-- Logo Datacomm -->
+                    <div class="flex flex-col items-center justify-center cursor-pointer group" onclick="openModal('work', 0)">
+                        <img id="work-logo-0" src="" alt="Datacomm" class="w-48 md:w-64 object-contain grayscale opacity-80 group-hover:scale-105 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
+                    </div>
+                    
+                    <!-- Logo PNJ (ML) -->
+                    <div class="flex flex-col items-center justify-center cursor-pointer group" onclick="openModal('work', 1)">
+                        <img id="work-logo-1" src="" alt="PNJ" class="w-48 md:w-64 object-contain grayscale opacity-80 group-hover:scale-105 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
+                    </div>
+
                 </div>
+                <p class="mt-10 text-sm md:text-base italic text-gray-400 tracking-wide transition-colors duration-300">
+                    Click logo to view documentation
+                </p>
             </div>
+        </div>
     </section>
 
     <!-- 4. PORTFOLIO PROJECT SECTION -->
-    <!-- Kata 'overflow-hidden' sudah saya hapus di baris bawah ini -->
     <section id="project" class="py-24 bg-white section-scroll flex flex-col items-center">
         <h2 class="text-sm font-semibold tracking-widest text-gray-500 uppercase mb-1">Portfolio</h2>
         <h3 class="text-4xl font-bold mb-12 uppercase tracking-wide text-gray-800">PROJECT</h3>
         
-        <!-- Tambahan mb-16 md:mb-0 agar area panah di HP punya ruang -->
         <div class="relative w-full max-w-6xl flex items-center justify-center mb-16 md:mb-0">
-            
-            <!-- Left Arrow (Panah Kiri) -->
+            <!-- Left Arrow -->
             <button onclick="moveProjectCarousel(-1)" class="absolute -bottom-16 left-[25%] md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:-left-12 lg:-left-16 z-20 p-2 text-maroon-900 hover:scale-110 transition-transform">
                 <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
             </button>
@@ -187,11 +187,10 @@
                 <!-- Projects injected by JS -->
             </div>
 
-            <!-- Right Arrow (Panah Kanan) -->
+            <!-- Right Arrow -->
             <button onclick="moveProjectCarousel(1)" class="absolute -bottom-16 right-[25%] md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:-right-12 lg:-right-16 z-20 p-2 text-maroon-900 hover:scale-110 transition-transform">
                 <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
             </button>
-
         </div>
     </section>
 
@@ -231,22 +230,19 @@
             <!-- Social Links -->
             <h3 class="text-3xl font-bold mb-8 uppercase text-gray-800">GET INTO ME</h3>
             <div class="flex justify-center space-x-6 text-maroon-800">
-                <!-- Placeholder icons -->
-                <a href="https://www.linkedin.com/in/raihanbagusmaulana" class="p-3 bg-white rounded-full shadow hover:bg-maroon-50 hover:scale-110 transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm5 7h-2v-3.5c0-.83-.67-1.5-1.5-1.5S10 12.67 10 13.5V17H8v-6h2v1.5c.38-.57 1.04-1.5 2.5-1.5 1.93 0 3.5 1.57 3.5 3.5V17z"/></svg></a>
+                <a href="https://www.linkedin.com/in/raihanbagusmaulana" target="_blank" class="p-3 bg-white rounded-full shadow hover:bg-maroon-50 hover:scale-110 transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm5 7h-2v-3.5c0-.83-.67-1.5-1.5-1.5S10 12.67 10 13.5V17H8v-6h2v1.5c.38-.57 1.04-1.5 2.5-1.5 1.93 0 3.5 1.57 3.5 3.5V17z"/></svg></a>
                 <a href="mailto:raihanbagusmaulana05@gmail.com" class="p-3 bg-white rounded-full shadow hover:bg-maroon-50 hover:scale-110 transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
-                
             </div>
         </div>
     </section>
 
     <!-- 8. CLOSING SECTION -->
-    <footer id="closing" class="relative w-full h-screen flex flex-col justify-between bg-gray-900 bg-cover bg-center" style="background-image: url('aset/AKHIR2.jpg);">
-        
+    <footer id="closing" class="relative w-full h-screen flex flex-col justify-between bg-navy-900">
         
         <div class="relative z-10 flex flex-col items-center justify-center flex-grow text-center px-4">
            <h1 class="text-4xl md:text-6xl font-bold text-white mt-16 md:mt-0 drop-shadow-lg tracking-widest mb-4">RAIHAN BAGUS MAULANA</h1>
            <a href="mailto:raihanbagusmaulana05@gmail.com" class="text-lg md:text-xl text-gray-200 drop-shadow-md hover:text-white hover:underline transition-all duration-300 block">raihanbagusmaulana05@gmail.com</a>
-            <p class="text-lg md:text-xl text-gray-200 drop-shadow-md">Depok</p>
+            <p class="text-lg md:text-xl text-gray-200 drop-shadow-md mt-2">Depok</p>
         </div>
 
         <div class="relative z-10 w-full pb-10 flex justify-center">
@@ -267,36 +263,35 @@
         <div class="absolute inset-0 bg-black/70 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
         
         <!-- Navigation Arrows (Left) -->
-        <button id="modal-prev" class="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 z-[110] bg-black/40 text-white p-2 md:p-3 rounded-full hover:bg-black/70 hover:scale-110 transition-all hidden" onclick="navigateModal(-1)">
+        <button id="modal-prev" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-[110] bg-black/50 text-white p-2 md:p-3 rounded-full hover:bg-black/80 hover:scale-110 transition-all hidden" onclick="navigateModal(-1)">
             <svg class="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
         </button>
 
         <!-- Modal Content Card -->
-        <!-- Background diubah jadi bg-offwhite dan teksnya jadi text-gray-800 -->
-        <div class="relative z-10 bg-offwhite w-[95%] md:w-[90%] max-w-7xl h-[85vh] rounded-3xl shadow-2xl flex flex-col items-center justify-center p-2 md:p-4 text-gray-800 overflow-hidden transform scale-95 transition-transform duration-300" id="modal-card">
+        <div class="relative z-10 bg-offwhite w-[95%] md:w-[90%] max-w-7xl h-[85vh] rounded-3xl shadow-2xl flex flex-col items-center justify-center p-2 md:p-4 text-gray-800 transform scale-95 transition-transform duration-300" id="modal-card">
             <div id="modal-content-area" class="w-full h-full flex items-center justify-center relative">
                 <!-- Content injected via JS -->
             </div>
             
             <!-- BACK Button -->
-            <!-- Saya menambahkan class text-white di sini agar teks tombol tetap putih walau background modalnya terang -->
             <button class="absolute bottom-[-20px] translate-y-full bg-maroon-900 text-white px-8 py-2 rounded-full text-sm font-semibold tracking-widest hover:bg-maroon-700 transition shadow-lg" style="bottom: -50px;" onclick="closeModal()">
                 BACK
             </button>
         </div>
 
         <!-- Navigation Arrows (Right) -->
-        <button id="modal-next" class="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 z-[110] bg-black/40 text-white p-2 md:p-3 rounded-full hover:bg-black/70 hover:scale-110 transition-all hidden" onclick="navigateModal(1)">
+        <button id="modal-next" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-[110] bg-black/50 text-white p-2 md:p-3 rounded-full hover:bg-black/80 hover:scale-110 transition-all hidden" onclick="navigateModal(1)">
             <svg class="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
         </button>
     </div>
 
     <script src="script.js"></script>
+    
     <!-- Tombol Scroll to Top -->
-<button id="btnScrollToTop" title="Kembali ke Atas">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-    <polyline points="18 15 12 9 6 15"></polyline>
-  </svg>
-</button>
+    <button id="btnScrollToTop" title="Kembali ke Atas" class="fixed bottom-6 right-6 bg-maroon-900 text-white p-3 rounded-full shadow-lg hidden hover:bg-maroon-700 transition-colors z-50">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
 </body>
 </html>

@@ -5,7 +5,7 @@
 const projects = [
     {
         title: "Orbitlink Studio",
-        thumbnail: "orbit/ORBITLINK.PNG",
+        thumbnail: "orbit/ORBITLINK.png",
         documentation: [
             { image: "orbit/DG.jpg", title: "Block Diagram" },
             { image: "orbit/FC 1.png", title: "Main Flowchart" },
@@ -110,7 +110,7 @@ const projects = [
         title: "Point-to-Point Fiber Optic Network Design and Maintenance Strategy",
         thumbnail: "aset/LOGOPNJ.png",
         documentation: [
-             { image: "fplan/1,png", title: "FO Route Map" },
+             { image: "fplan/1.png", title: "FO Route Map" },
              { image: "fplan/2.png", title: "Fiber Optic Cable Installation Route Topology" },
              { image: "fplan/3.png", title: "Transmission & Network Equipment" },
              { image: "fplan/4.png", title: "Route Infrastructure & Protection" },

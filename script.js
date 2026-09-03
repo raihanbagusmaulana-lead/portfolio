@@ -127,7 +127,7 @@ const projects = [
         ]
     },
     {
-        title: "PERANCANGAN JARINGAN FTTH 128 TITIK MENGGUNAKAN GOOGLE EARTH PRO",
+        title: "FTTH Network Design for 128 Nodes Using Google Earth Pro",
         thumbnail: "aset/LOGOPNJ.png",
         documentation: [
              { image: "ftth/1.png", title: "Equipment and software used" },
@@ -395,60 +395,141 @@ function changeOrgImg(orgIndex, dir) {
 
 
 /* ==========================================================================
-   5. PROJECT CAROUSEL (Horizontal Sliding)
+   5. PROJECT CAROUSEL (Categorized & Horizontal Sliding)
    ========================================================================== */
-let currentProjectIndex = 0;
+
+// Menyimpan posisi slide untuk masing-masing kategori
+let projectState = {
+    software: 0,
+    network: 0,
+    web: 0
+};
+
+// Pengelompokan data proyek berdasarkan index dari array projects utama
+const categorizedProjects = [
+    {
+        id: 'software',
+        title: 'Software Development & Satellite',
+        items: [ projects[0], projects[3] ] // Orbitlink Studio, Rain Attenuation
+    },
+    {
+        id: 'network',
+        title: 'Network Project',
+        items: [ projects[6], projects[7], projects[8], projects[9], projects[4], projects[5]] // Atoll, FO, FTTH, Cisco, Horn, Traffic
+    },
+    {
+        id: 'web',
+        title: 'Web Development & AI Agent',
+        items: [ projects[1], projects[2] ] // Altered Archives, Langflow
+    }
+];
 
 function renderProjects() {
-    const container = document.getElementById('project-carousel');
+    const container = document.getElementById('project-categories-container');
     container.innerHTML = '';
     
-    projects.forEach((proj, index) => {
-        const div = document.createElement('div');
-        div.id = `proj-card-${index}`;
+    categorizedProjects.forEach(category => {
+        const section = document.createElement('div');
+        section.className = "flex flex-col items-center w-full";
         
-        div.onclick = () => {
-            if (currentProjectIndex === index) {
-                openModal('project', index);
-            }
-        };
-        
-        div.innerHTML = `
-            <div class="hidden md:flex w-full flex-1 items-center justify-center overflow-hidden mb-3">
-                <img src="${proj.thumbnail}" alt="${proj.title}" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
-            </div>
+        // Cek apakah proyeknya 3 atau lebih (untuk mode korsel)
+        const isCarousel = category.items.length >= 3;
+
+        // Render tombol panah HANYA jika masuk mode korsel
+        let arrowsHTML = '';
+        if (isCarousel) {
+            arrowsHTML = `
+                <button onclick="moveProjectCarousel('${category.id}', -1)" class="absolute -bottom-16 left-[20%] md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:-left-12 lg:-left-16 z-20 p-2 text-maroon-900 hover:scale-110 transition-transform">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+                <button onclick="moveProjectCarousel('${category.id}', 1)" class="absolute -bottom-16 right-[20%] md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:-right-12 lg:-right-16 z-20 p-2 text-maroon-900 hover:scale-110 transition-transform">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            `;
+        }
+
+        // Struktur pembungkus track
+        section.innerHTML = `
+            <h4 class="text-xl md:text-2xl font-bold mb-8 text-maroon-900 tracking-widest text-center uppercase border-b-2 border-gray-200 pb-4">
+                ${category.title}
+            </h4>
             
-            <h3 class="text-xl md:text-2xl font-bold uppercase text-center shrink-0">${proj.title}</h3>
-
-            <p class="mt-2 text-xs md:text-sm italic text-gray-400 tracking-wide opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
-                Click card to view documentation
-            </p>
+            <div class="relative w-full flex items-center justify-center">
+                ${arrowsHTML}
+                <!-- Ubah wujud Track berdasarkan jumlah proyek -->
+                <div id="carousel-${category.id}" class="${isCarousel ? 'flex items-center justify-center w-full h-[400px] relative transition-all duration-500' : 'flex flex-wrap justify-center gap-8 md:gap-12 w-full'}">
+                </div>
+            </div>
         `;
-        container.appendChild(div);
+        container.appendChild(section);
+
+        const track = document.getElementById(`carousel-${category.id}`);
+        
+        category.items.forEach((proj, localIndex) => {
+            const div = document.createElement('div');
+            div.id = `proj-card-${category.id}-${localIndex}`;
+            const globalIndex = projects.findIndex(p => p.title === proj.title);
+
+            div.innerHTML = `
+                <div class="hidden md:flex w-full flex-1 items-center justify-center overflow-hidden mb-3">
+                    <img src="${proj.thumbnail}" alt="${proj.title}" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <h3 class="text-lg md:text-xl font-bold uppercase text-center shrink-0 px-4">${proj.title}</h3>
+                <p class="mt-2 text-xs md:text-sm italic text-gray-400 tracking-wide opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+                    Click card to view documentation
+                </p>
+            `;
+
+            if (isCarousel) {
+                // Perilaku untuk mode Korsel (3D)
+                div.onclick = () => {
+                    if (projectState[category.id] === localIndex) {
+                        openModal('project', globalIndex);
+                    }
+                };
+            } else {
+                // Perilaku Statis untuk 1-2 proyek (Berjejer rapi, otomatis full membesar)
+                div.className = "w-full max-w-[320px] md:max-w-[400px] bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-center items-center text-maroon-900 aspect-[4/3] p-4 border border-gray-200 cursor-pointer group hover:scale-105 transition-transform duration-300";
+                div.onclick = () => openModal('project', globalIndex);
+            }
+            
+            track.appendChild(div);
+        });
+        
+        // Inisialisasi susunan 3D hanya jika masuk mode korsel
+        if (isCarousel) {
+            updateProjectCarousel(category.id);
+        }
     });
+}
+
+function moveProjectCarousel(catId, dir) {
+    const category = categorizedProjects.find(c => c.id === catId);
+    let curr = projectState[catId];
     
-    updateProjectCarousel();
+    curr += dir;
+    if (curr < 0) curr = category.items.length - 1;
+    if (curr >= category.items.length) curr = 0;
+    
+    projectState[catId] = curr;
+    updateProjectCarousel(catId);
 }
 
-function moveProjectCarousel(dir) {
-    currentProjectIndex += dir;
-    if (currentProjectIndex < 0) currentProjectIndex = projects.length - 1;
-    if (currentProjectIndex >= projects.length) currentProjectIndex = 0;
-    updateProjectCarousel();
-}
+function updateProjectCarousel(catId) {
+    const category = categorizedProjects.find(c => c.id === catId);
+    const total = category.items.length;
+    const curr = projectState[catId];
 
-function updateProjectCarousel() {
-    const total = projects.length;
     for (let i = 0; i < total; i++) {
-        const card = document.getElementById(`proj-card-${i}`);
+        const card = document.getElementById(`proj-card-${catId}-${i}`);
         
         card.className = "project-card bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-center items-center text-maroon-900 aspect-[4/3] p-4 border border-gray-200";
         
-        if (i === currentProjectIndex) {
+        if (i === curr) {
             card.classList.add('active', 'group');
-        } else if (i === (currentProjectIndex - 1 + total) % total) {
+        } else if (total > 1 && i === (curr - 1 + total) % total) {
             card.classList.add('prev');
-        } else if (i === (currentProjectIndex + 1) % total) {
+        } else if (total > 1 && i === (curr + 1) % total) {
             card.classList.add('next');
         } else {
             card.classList.add('hidden-card');

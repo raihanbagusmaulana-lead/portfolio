@@ -61,7 +61,7 @@ const projects = [
         thumbnail: "horn/1.png",
         documentation: [
              { image: "horn/2.png", title: "Antenna calculation results" },
-             { image: "horn/3.png", title: "Initial preliminary design" },
+             { image: "horn/3.jpg", title: "Initial preliminary design" },
              { image: "horn/4.png", title: "Initial CST design" },
              { image: "horn/5.png", title: "Final CST design" },
              { image: "horn/1.png", title: "Fabrication" },

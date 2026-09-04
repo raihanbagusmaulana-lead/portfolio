@@ -122,7 +122,6 @@ const projects = [
              { image: "fplan/10.png", title: "Optical Amplifier (EDFA) Preventive Maintenance Steps" },
              { image: "fplan/11.png", title: "Optical Amplifier (EDFA) Corrective Maintenance Steps" },
              { image: "fplan/12.png", title: "Optical Terminal Box (OTB) Preventive Maintenance Steps" },
-             { image: "fplan/13.png", title: "Optical Terminal Box (OTB) Corrective Maintenance Steps" },
              { image: "fplan/14.png", title: "Maintenance Cost Estimation" }
         ]
     },

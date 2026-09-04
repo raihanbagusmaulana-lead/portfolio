@@ -275,7 +275,6 @@ const educationWork = {
 
 const programs = [
     { name: "Orbit Future Academy AWS re/Start", url: "https://www.instagram.com/p/DakX0rzjQEo/?igsh=cG5waDUxMjF1enMx&igsi=cG5waDUxMjF1enMx" },
-    { name: "Karirnex Bootcamp Excel, Word, Power Point", url: "https://www.instagram.com/p/DbkuppxPdec/?igsh=MTBta3B5eTJhM2U3Zg==&igsi=MTBta3B5eTJhM2U3Zg==" },
     { name: "Python Essentials 1", url: "https://www.netacad.com/courses/python-essentials-1?courseLang=en-US" }
 ];
 

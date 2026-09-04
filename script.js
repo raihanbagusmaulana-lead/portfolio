@@ -262,10 +262,8 @@ const educationWork = {
                 { image: "ml/6.png", title: "Simulation Log Table" },
                 { image: "ml/7.png", title: "Handover Logs" },
                 { image: "ml/8.png", title: "Event Logs" },
-                { image: "ml/9.png", title: "Cumulative Handover (HO) Plot: A vs. B" },
-                { image: "ml/10.png", title: "RSRP Comparison Plot: A vs. B" },
-                { image: "ml/11.png", title: "RSRP vs. Neighbor A Plot" },
-                { image: "ml/12.png", title: "RSRP vs. Neighbor B Plot" },
+                { image: "ml/9.png", title: "Conventional vs. Machine Learning Comparison Graph 1" },
+                { image: "ml/10.png", title: "Conventional vs. Machine Learning Comparison Graph 2" },
                 { image: "ml/13.png", title: "Simulation Information" },
                 { image: "ml/14.png", title: "Performance Comparison Metrics" }
             ]
